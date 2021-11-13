@@ -1,4 +1,4 @@
-﻿namespace NBEGUI {
+namespace NBEGUI {
     partial class NBEGUI {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,6 +29,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.extractTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applyTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip1.SuspendLayout();
@@ -38,9 +40,9 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 249);
+            this.textBox1.Location = new System.Drawing.Point(12, 354);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
+            this.textBox1.Size = new System.Drawing.Size(514, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -52,7 +54,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(316, 225);
+            this.listBox1.Size = new System.Drawing.Size(514, 329);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -60,23 +62,40 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.saveToolStripMenuItem,
+            this.extractTextToolStripMenuItem,
+            this.applyTextToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(104, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 92);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // extractTextToolStripMenuItem
+            // 
+            this.extractTextToolStripMenuItem.Name = "extractTextToolStripMenuItem";
+            this.extractTextToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.extractTextToolStripMenuItem.Text = "Extract Text";
+            this.extractTextToolStripMenuItem.Click += new System.EventHandler(this.extractTextToolStripMenuItem_Click);
+            // 
+            // applyTextToolStripMenuItem
+            // 
+            this.applyTextToolStripMenuItem.Name = "applyTextToolStripMenuItem";
+            this.applyTextToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.applyTextToolStripMenuItem.Text = "Apply Text";
+            this.applyTextToolStripMenuItem.Click += new System.EventHandler(this.applyTextToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -92,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 281);
+            this.ClientSize = new System.Drawing.Size(538, 386);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
@@ -113,6 +132,8 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem extractTextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applyTextToolStripMenuItem;
     }
 }
 
